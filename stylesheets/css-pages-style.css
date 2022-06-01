@@ -86,7 +86,7 @@ h1 {
 }
 
 /*
-  This styles all paragraphs to have a font colour of #2d422c and a font size of 18 pixels.
+  This styles all paragraphs to have a font colour of #2d422c and a font size of 20 pixels.
 
   It uses the Cambria font family, if that doesn't work then it uses the Baskerville font family,
   if that doesn't work then it uses the Garamond font family, if that doesn't work it uses the 
@@ -97,7 +97,7 @@ h1 {
 */
 p {
   color: #2d422c;
-  font-size: 18px;
+  font-size: 20px;
   font-family: Cambria, Baskerville, Garamond, "Times New Roman", serif;
   word-spacing: 5px;
   padding: 0px 70px;
@@ -115,13 +115,13 @@ hr {
 }
 
 /*
-  This styles all the text in the form to have a font colour of #2d422c and a font size of 18 pixels.
+  This styles all the text in the form to have a font colour of #2d422c and a font size of 20 pixels.
   This styles forms to have 10 pixels of margin top-and-bottom and 70 pixels of margin left-and-right.
 */
 form {
   margin: 10px 70px;
   color: #2d442c;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /*
@@ -151,7 +151,7 @@ label {
   This styling adds a padding of 7 pixels top-and-bottom and 20 pixels left-and-right. It also adds 8 pixels of margin top-and-bottom
   and no margin left-and-right.
 
-  This styling makes the text have a font-size of 18 pixels. It has a font colour of #2d422c.
+  This styling makes the text have a font-size of 20 pixels. It has a font colour of #2d422c.
 
   It uses the Cambria font family, if that doesn't work then it uses the Baskerville font family,
   if that doesn't work then it uses the Garamond font family, if that doesn't work it uses the 
@@ -172,7 +172,7 @@ textarea {
   padding: 7px 20px;
   margin: 8px 0px;
 
-  font-size: 18px;
+  font-size: 20px;
   font-family: Cambria, Baskerville, Garamond, "Times New Roman", serif;
   color: #2d422c;
 
@@ -196,7 +196,7 @@ input[type="date"] {
 
 /*
   This styles all the submit buttons to have a background colour of #588157 and a font colour of #dad7cd. 
-  It also styles the submit buttons to have a font size of 18 pixels and be bold. 
+  It also styles the submit buttons to have a font size of 20 pixels and be bold. 
   
   It uses the Cambria font family, if that doesn't work then it uses the Baskerville font family,
   if that doesn't work then it uses the Garamond font family, if that doesn't work it uses the 
@@ -215,7 +215,7 @@ input[type="submit"] {
   color: #dad7cd;
 
   font-family: Cambria, Baskerville, Garamond, "Times New Roman", serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 
   border: none;
@@ -343,11 +343,11 @@ input[type="submit"]:hover {
 /* 
   This is an ID for styling the text in the footer.
 
-  It has a font colour of #2d422c and a font size of 18 pixels.
+  It has a font colour of #2d422c and a font size of 20 pixels.
 */
 #footer-text {
   color: #2d422c;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* 
