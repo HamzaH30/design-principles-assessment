@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="stylesheets/css-pages-style.css" />
+
+    <!-- Internal CSS -->
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <!-- Restaurant name -->
+      <h1 id="restaurant-name">MUGHALS & CO.</h1>
+      <!-- Navigation bar -->
+      <nav style="display: inline-block">
+        <a href="index.html" class="nav-link"><li>Home</li></a>
+        <a href="about.html" class="nav-link"><li>About</li></a>
+        <a href="catering.html" class="nav-link"><li>Catering</li></a>
+        <a href="contact.html" class="nav-link"><li>Contact</li></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Heading for this page. -->
+      <h1>Catering</h1>
+      <!-- hr tag styled to act as a line underneath the heading for visual appeal. -->
+      <hr />
+      <article>
+        <!-- Some paragraphs giving a brief overview of the catering service offered by Mughals & Co. -->
+        <p>
+          For the last 50 years, Mughals & Co. has been proud to make birthdays,
+          weddings, dinner parties, family celebrations, and business meetings a
+          memorable event! We can make your special event become one for the
+          ages!
+        </p>
+        <p>
+          Our chefs will work alongside you in designing the catering menu. We
+          offer a wide range of pre-selected menus depending on the occasion, or
+          we can assist you in creating a custom menu for your event. We
+          understand the difficulty in planning a menu whilst also taking in
+          consideration the many dietary restrictions and preferences, but with
+          our help and expertise we can combat all these challenges.
+        </p>
+        <p>
+          Please fill out the form below for your event. We will promptly
+          contact you with menu suggestions and pricing for your consideration.
+          <br />
+          <!-- Disclaimer to the user -->
+          <span class="disclaimer-text">
+            Note: This is a school project, do not submit any personal or
+            sensitive information.
+          </span>
+        </p>
+      </article>
+
+      <!-- This is a form that will be asking the user for information regarding their wish to book Mughals & Co. for a catering event. -->
+      <form name="user-catering-info" id="catering-info" method="get">
+        <!-- Fieldset asking for contact info. -->
+        <fieldset form="catering-info" id="contact-info">
+          <legend>Contact Information</legend>
+
+          <!-- Input for user's first name -->
+          <label for="first-name">
+            First Name (ex: John) <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- Input for user's last name -->
+          <label for="last-name"
+            >Last Name (ex: Doe) <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- Input for company/organization name if this event is being booked by a user on behalf of a company, for a business event. -->
+          <label for="company-name">
+            Company/Organization (ex: Mughals & Co.):
+          </label>
+          <input
+            type="text"
+            name="company-name"
+            id="company-name"
+            autocomplete="on"
+          />
+
+          <br />
+
+          <!-- Input for user's email -->
+          <label for="user-email">
+            Email (ex: johndoe@gmail.com)
+            <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- Input for user's phone number -->
+          <label for="phone-number">
+            Phone Number (ex: 1-234-567-8901)
+            <span class="required-text">[required]</span>:
+          </label>
+          <!-- According to "The International Public Telecommunication Numbering Plan" phone numbers cannot exceed 15 digits. https://en.wikipedia.org/wiki/E.164 -->
+          <input
+            type="tel"
+            name="phone-number"
+            id="phone-number"
+            minlength="7"
+            maxlength="15"
+            autocomplete="on"
+            required
+          />
+        </fieldset>
+
+        <br />
+
+        <!-- Fieldset asking user for the details of their catering event. -->
+        <fieldset form="catering-info" id="event-details">
+          <legend>Event Details</legend>
+
+          <!-- Input for the date of the event -->
+          <label for="event-date">
+            Date of Event (yyyy/mm/dd)
+            <span class="required-text">[required]</span>:
+          </label>
+          <input type="date" name="event-date" id="event-date" required />
+
+          <br />
+
+          <!-- Group of radio buttons asking for time frame of event, morning or evening. -->
+          <label for="time-frame"
+            >Requested Time Frame <span class="required-text">[required]</span>:
+          </label>
+          <br />
+
+          <!-- Morning (AM) radio button -->
+          <input type="radio" name="time-frame" value="morning" required />
+          <label for="morning">Morning (AM)</label>
+          <br />
+
+          <!-- Evening (PM) radio button -->
+          <input type="radio" name="time-frame" value="evening" required />
+          <label for="evening">Evening (PM)</label>
+
+          <br />
+
+          <!-- Text input for event location -->
+          <label for="event-location">
+            Event Location (ex: 221B Baker Street)
+            <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="text"
+            name="event-location"
+            id="event-location"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- Number input for number of people attending event. -->
+          <label for="num-people">
+            Number of People (ex: 80)
+            <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="number"
+            name="num-people"
+            id="num-people"
+            min="1"
+            required
+          />
+
+          <br />
+
+          <!-- Text input asking for what type of event is being held. -->
+          <label for="event-type">
+            Type of Event (ex: Wedding, Birthday, Business Function):
+          </label>
+          <input
+            type="text"
+            name="event-type"
+            id="event-type"
+            autocomplete="on"
+          />
+
+          <!-- Textarea input allowing for the user to add any additional information if they wish to do so. -->
+          <label for="additional-info">
+            Any additional information you would like to add:
+          </label>
+          <!-- No need to add cols attribute as the textarea will have a width of 100%. -->
+          <textarea
+            name="additional-info"
+            id="additional-info"
+            rows="10"
+          ></textarea>
+        </fieldset>
+
+        <!-- Submit button -->
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </main>
+
+    <!-- A styled hr tag to separate and identify the footer. -->
+    <hr id="footer-hr" />
+    <footer>
+      <p id="footer-text">
+        <sup>&copy;</sup>2022, Mughals & Co. All rights reserved. Website made
+        by Hamza Haque.
+        <br />
+        <span class="disclaimer-text">
+          NOTE: This is a school project. DO NOT submit any personally
+          identifiable information and/or sensitive information on this website.
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>

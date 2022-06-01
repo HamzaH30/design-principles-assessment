@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="stylesheets/css-pages-style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      /* 
+        This is an ID that styles the text displaying the minimum and maximum range values for the range input. 
+
+        It has a font size of 18 pixels, 0 pixels of margin, and 0 pixels of padding. 
+      */
+      #range-text {
+        font-size: 18px;
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Restaurant name -->
+      <h1 id="restaurant-name">MUGHALS & CO.</h1>
+      <!-- Navigation bar -->
+      <nav style="display: inline-block">
+        <a href="index.html" class="nav-link"><li>Home</li></a>
+        <a href="about.html" class="nav-link"><li>About</li></a>
+        <a href="catering.html" class="nav-link"><li>Catering</li></a>
+        <a href="contact.html" class="nav-link"><li>Contact</li></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Heading for this page. -->
+      <h1>Contact</h1>
+      <!-- hr tag styled to act as a line underneath the heading for visual appeal. -->
+      <hr />
+
+      <!-- Brief description of page, informing user to fill out form. -->
+      <p>
+        We would love to hear from you! Please complete the form below to get in
+        touch with us. <br />
+        <!-- Disclaimer to the user -->
+        <span class="disclaimer-text">
+          NOTE: This is a school project, do not submit any personal or
+          sensitive information.
+        </span>
+      </p>
+
+      <!-- Form that will be asking the user for their contact information, and then they can send a message to me. -->
+      <form name="user-contact" id="contact-form" method="get">
+        <!-- Fieldset asking for the user's contact information. -->
+        <fieldset form="contact-form" name="user-contact-info">
+          <legend>Your Contact Information</legend>
+
+          <!-- This text input will ask the user for their first name. -->
+          <label for="first-name"
+            >First Name (ex: John)
+            <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- This text input will ask the user for their last name. -->
+          <label for="last-name"
+            >Last Name (ex: Doe) <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- This email input will ask the user for their email so that I can contact them in case I need to. -->
+          <label for="contact-email">
+            Your Email Address (ex: johndoe@gmail.com)
+            <span class="required-text">[required]</span>:
+          </label>
+          <input
+            type="email"
+            name="contact-email"
+            id="contact-email"
+            autocomplete="on"
+            required
+          />
+
+          <br />
+
+          <!-- This telephone input will ask the user for their telephone number. -->
+          <label for="phone-number">
+            Your Phone Number (ex: 1-234-567-8901):
+          </label>
+          <!-- According to "The International Public Telecommunication Numbering Plan" phone numbers cannot exceed 15 digits. https://en.wikipedia.org/wiki/E.164 -->
+          <input
+            type="tel"
+            name="phone-number"
+            id="phone-number"
+            minlength="7"
+            maxlength="15"
+            autocomplete="on"
+          />
+        </fieldset>
+
+        <br />
+
+        <!-- This fieldset will ask the user for their message they want to send to me. -->
+        <fieldset form="contact-form" name="user-message">
+          <legend>Your Message To Send</legend>
+
+          <label for="message"
+            >Your message <span class="required-text">[required]</span>:
+          </label>
+          <textarea name="message" id="message" rows="10" required></textarea>
+
+          <br />
+
+          <!-- 
+              This range input will ask the user for how urgent they 
+              expect a reply. This can help me determine when I should
+              reply to the message. 
+            -->
+          <label for="message-importance">
+            On a scale of 1 - 10, how urgent do you expect a reply?
+            <span class="required-text">[required]</span>:
+          </label>
+          <p id="range-text">
+            1
+            <!-- Using inline CSS to style the range input to have a width of 50%. -->
+            <input
+              type="range"
+              name="message-importance"
+              id="message-importance"
+              min="1"
+              max="10"
+              style="width: 50%"
+              required
+            />
+            10
+          </p>
+        </fieldset>
+
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </main>
+
+    <!-- A styled hr tag to separate and identify the footer. -->
+    <hr id="footer-hr" />
+    <footer>
+      <p id="footer-text">
+        <sup>&copy;</sup>2022, Mughals & Co. All rights reserved. Website made
+        by Hamza Haque.
+        <br />
+        <span class="disclaimer-text">
+          NOTE: This is a school project. DO NOT submit any personally
+          identifiable information and/or sensitive information on this website.
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>

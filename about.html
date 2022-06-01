@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="stylesheets/css-pages-style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      /* This styles the figures to have 20 pixels of padding top-and-bottom. 0 pixels of padding left-and-right */
+      figure {
+        padding: 20px 0px;
+      }
+
+      /*
+        This styles the images on this page to be centered by being a block element and having auto margin on the left and right.
+      */
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /*
+        This styles all the figcaptions on this page to be centered and have a font size of 18 pixels.
+      */
+      figcaption {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      /*
+        This is an ID that styles the anchor tag.
+
+        It is an inline-block, has a relative position, has a value of 50% for the left property, and has a transform property with a
+        value of translateX(-50%). This is to center the element on the webpage.
+
+        It has a background colour of #588157 and a font colour of #dad7cd.
+        It has a font size of 21 pixels, a padding of 10 pixels top-and-bottom and 15 pixels of padding left-and-right.
+        It has 62 pixels of margin on the top & bottom.
+      */
+      #mughal-wikipedia-link {
+        /* Code added with the assistance of Mr. Hardman */
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        /* End of referenced code */
+
+        background-color: #588157;
+        color: #dad7cd;
+        font-size: 21px;
+        padding: 10px 15px;
+        margin: 62px 0px;
+      }
+
+      /* 
+        This is an ID that styles the div surrounding the two images. In order to add sufficient spacing between the 
+        images and the main text, this styles the div to have 75 pixels of margin on the top and 50 pixels of margin on the bottom. 
+      */
+      #food-pics {
+        margin: 75px 0px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Restaurant name -->
+      <h1 id="restaurant-name">MUGHALS & CO.</h1>
+      <!-- Navigation bar -->
+      <nav style="display: inline-block">
+        <a href="index.html" class="nav-link"><li>Home</li></a>
+        <a href="about.html" class="nav-link"><li>About</li></a>
+        <a href="catering.html" class="nav-link"><li>Catering</li></a>
+        <a href="contact.html" class="nav-link"><li>Contact</li></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Heading for this page. -->
+      <h1>About Mughals & Co. Restaurant</h1>
+      <!-- hr tag styled to act as a line underneath the heading for visual appeal. -->
+      <hr />
+
+      <!-- Multiple paragraphs about the history of Mughlai cuisine. -->
+      <section>
+        <p>
+          Inspired by the Mughlai cuisine found in the vast lands of the Mughal
+          Empire, Mughals & Co. has been serving authentic Mughlai dishes to the
+          public for over 50 years!
+        </p>
+        <p>
+          The Mughal Empire was an early modern Islamic empire situated in South
+          Asia. They ruled the Indian subcontinent for over 2 centuries. Arts,
+          trades, literature, and especially architecture, flourished within the
+          empire. Many sites built in the Mughal Empire are now UNESCO World
+          Heritage Sites, the most popular being the Taj Mahal, described as the
+          “jewel of Muslim art in India and one of the universally admired
+          masterpieces of the world's heritage.”
+          <br />
+        </p>
+        <a
+          id="mughal-wikipedia-link"
+          href="https://en.wikipedia.org/wiki/Mughal_Empire"
+          target="_blank"
+        >
+          To read more about the Mughal Empire, click this link.
+        </a>
+      </section>
+      <section>
+        <p>
+          Along with Mughal rule, came a cuisine rich in colour, spices, aroma,
+          and taste. Recipes that were perfected over time by skilled chefs and
+          prepared only for the Emperors and Royalty have now become the icon of
+          South Asian cuisine. Many common Indian foods such as biryani, kebabs,
+          kofte, and pilau all originate from Mughlai cuisine.
+        </p>
+        <p>
+          Mughlai cooking was a unique style of cooking that was unbeknownst to
+          the world at the time. It included spices and herbs found only in the
+          corners of the empire and used a variety of cooking techniques from
+          all over the empire. The curries and stews are mixed with the purest
+          butter, milk, and cream. The traditional Mughlai desserts are
+          elegantly spiced with saffron, cardamom, and cinnamon.
+        </p>
+        <!-- 2 pictures showing Mughlai/Indian food. Using a div to group the images and apply styling. -->
+        <div id="food-pics">
+          <figure>
+            <img
+              src="images/mughal-cuisine-1.jpg"
+              alt="A picture showing a display of Mughlai dishes. Photo Credit: Taste Pak."
+            />
+            <figcaption>
+              A picture showing a display of Mughlai food. Photo Credit: Taste
+              Pak.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/mughal-cuisine-2.jpg"
+              alt="A picture of a Mughlai dish on display. Photo Credit: Taste Pak."
+            />
+            <figcaption>
+              A picture showing a Mughlai dish. Photo Credit: Taste Pak.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- A styled hr tag to separate and identify the footer. -->
+    <hr id="footer-hr" />
+    <footer>
+      <p id="footer-text">
+        <sup>&copy;</sup>2022, Mughals & Co. All rights reserved. Website made
+        by Hamza Haque.
+        <br />
+        <span class="disclaimer-text">
+          NOTE: This is a school project. DO NOT submit any personally
+          identifiable information and/or sensitive information on this website.
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>

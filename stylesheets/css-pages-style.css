@@ -1,0 +1,362 @@
+/* External CSS page */
+
+/*
+  Colour palete: https://coolors.co/2d422c-588157-6a9969-dad7cd
+  Primary Colour: #2D422C.
+  Secondary Colours: #588157 and #6A9969
+  Neutral Colour: #DAD7CD
+
+  This is a monochromatic colour scheme. The main colour of the colour scheme is green. It was chosen because
+  it is a warm colour that works well with the neutral colour to provide a relaxed and inviting theme/feeling. 
+  Green can help convey to the customer that our restaurant is a healthy option. 
+  Furthermore, since the restaurant is based on the Mughal Empire, the main colour is green as it was the main colour 
+  of the empire as well.
+
+  The primary colour is a dark green colour. It is used as the main text (headings, paragraphs, etc.).
+  There are 2 secondary colours. The first secondary colour (#588157) is used as the background colour for the header, 
+  the submit button, the rectangle on the homepage, and the link on the about page. It is also used as the colour 
+  for the hr tags under every heading, and the hr tag for the footer. The second secondary colour (#6A9969) is used as
+  the background colour for when items in the navigation menu are hovered.
+
+  The neutral colour is a light colour (not as light as white). This was used because the website is a light-theme website, and
+  this colour enhances the look of this theme. It is also used the the colour of the text for when the background is not this colour.
+  This colour works well with the primary colour to make it stand out and the neutral colour does not compete for attention improving the 
+  look of the website.
+*/
+
+/*
+  This adds a Google Font. It is used for the "Where Kings Dine" text on the index.html page.
+*/
+@font-face {
+  font-family: "Great Wishes";
+  src: url(../fonts/great_wishes-webfont.woff);
+}
+
+/*
+  All elements will have a line height of 140% of their font size applied to all text.
+*/
+* {
+  line-height: 140%;
+}
+
+/*
+  This styles the entire website to have 0 pixels of margin and a background colour of #dad7cd.
+*/
+body {
+  margin: 0px;
+  background-color: #dad7cd;
+}
+
+/* 
+  This styles the header to have a background colour of #588157. As well as centering all text in the header.
+*/
+header {
+  background-color: #588157;
+  text-align: center;
+}
+
+/*
+  This styles the nav to have 20 pixels of padding only on the top-and-bottom.
+*/
+nav {
+  padding: 20px 0px;
+}
+
+/* 
+  This styles all main headings to have a font colour of #2d422c and have 5 pixels of margin on the bottom. 
+  This styles the headings to be centered, bold, and have a font size of 36 pixels. 
+
+  This styling uppercases the text. It also gives 4 pixels of letter spacing.
+
+  The heading text will use the Didot font family, then Palatino if Didot doesn't work, 
+  then Lucida Bright if Palatino doesn't work, and finally serif font as a last resort.
+*/
+h1 {
+  color: #2d422c;
+  margin-bottom: 5px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  letter-spacing: 4px;
+
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Didot, Palatino, "Lucida Bright", serif;
+}
+
+/*
+  This styles all paragraphs to have a font colour of #2d422c and a font size of 18 pixels.
+
+  It uses the Cambria font family, if that doesn't work then it uses the Baskerville font family,
+  if that doesn't work then it uses the Garamond font family, if that doesn't work it uses the 
+  Times New Roman font family, and finally it'll use the serif font as a last resort.
+
+  The paragraph text has a padding of 0 pixels top-and-bottom and 70 pixels left-and-right.
+  It has a word spacing of 5 pixels.
+*/
+p {
+  color: #2d422c;
+  font-size: 18px;
+  font-family: Cambria, Baskerville, Garamond, "Times New Roman", serif;
+  word-spacing: 5px;
+  padding: 0px 70px;
+}
+
+/* 
+  This styles all horizontal rules (hr) to have a border that has a line-width of 5 pixels. is solid, and has a colour of #588157.
+  All horizontal rules have a border-radius of 5 pixels (rounded ends). They have a width of 50%. Their margin is auto.
+*/
+hr {
+  border: 5px solid #588157;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+}
+
+/*
+  This styles all the text in the form to have a font colour of #2d422c and a font size of 18 pixels.
+  This styles forms to have 10 pixels of margin top-and-bottom and 70 pixels of margin left-and-right.
+*/
+form {
+  margin: 10px 70px;
+  color: #2d442c;
+  font-size: 18px;
+}
+
+/*
+  This styles the legends of the fieldsets to be bolded in order to emphasize and draw the user's attention
+  to the forms.
+*/
+legend {
+  font-weight: bold;
+}
+
+/* 
+  This styles the labels of the forms to be inline-block and have 15 pixels of margin on the top. This is to ensure
+  there is enough spacing between all the elements inside the form, and to group related labels and inputs together.
+*/
+label {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/*
+  This styles all the inputs and textarea. This styles the inputs and textarea to have a width of 100% to make it 
+  the full width of the form it's in. 
+
+  These elements also have a box-sizing property of border-box. This includes padding into the total width of the element. 
+  If it's not added the input will be bigger than the width of the form. Reference: https://www.w3schools.com/css/css3_box-sizing.asp
+  
+  This styling adds a padding of 7 pixels top-and-bottom and 20 pixels left-and-right. It also adds 8 pixels of margin top-and-bottom
+  and no margin left-and-right.
+
+  This styling makes the text have a font-size of 18 pixels. It has a font colour of #2d422c.
+
+  It uses the Cambria font family, if that doesn't work then it uses the Baskerville font family,
+  if that doesn't work then it uses the Garamond font family, if that doesn't work it uses the 
+  Times New Roman font family, and finally it'll use the serif font as a last resort.
+  
+  This styling adds a border that has a line-width of 1 pixel, is solid, and has a border-radius of 5 pixels (rounded corners).
+
+  This styling makes the input and textarea elements have a background colour of #dad7cd.
+*/
+input,
+textarea {
+  width: 100%;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding: 7px 20px;
+  margin: 8px 0px;
+
+  font-size: 18px;
+  font-family: Cambria, Baskerville, Garamond, "Times New Roman", serif;
+  color: #2d422c;
+
+  border: 1px solid;
+  border-radius: 5px;
+
+  background-color: #dad7cd;
+}
+
+/* 
+  This styles all the radio buttons to have a width of min-content, making all the radio buttons take up as little width
+  as possible.
+
+  It also styles all the date inputs to have a width of min-content, making it take as little width as possible thus making it
+  easier for the user to click the calendar icon and select a date
+*/
+input[type="radio"],
+input[type="date"] {
+  width: min-content;
+}
+
+/*
+  This styles all the submit buttons to have a background colour of #588157 and a font colour of #dad7cd. 
+  It also styles the submit buttons to have a font size of 18 pixels and be bold. 
+  
+  It uses the Cambria font family, if that doesn't work then it uses the Baskerville font family,
+  if that doesn't work then it uses the Garamond font family, if that doesn't work it uses the 
+  Times New Roman font family, and finally it'll use the serif font as a last resort.
+
+  It does not have a border, but has a border-radius of 5 pixels (rounded edges).
+
+  There is 12 pixels of padding top-and-bottom and 30 pixels of padding left-and-right. There is 10 pixels of margin on the top 
+  and 30 pixels of margin on the bottom.
+
+  This styling makes it so that when the cursor is on the submit button, it changes to a pointer. As well as adding a duration of 
+  0.4 seconds for transitions (i.e., change of colour when hovered).
+*/
+input[type="submit"] {
+  background-color: #588157;
+  color: #dad7cd;
+
+  font-family: Cambria, Baskerville, Garamond, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 5px;
+
+  padding: 12px 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  cursor: pointer;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+/* 
+  This styles the submit button to, when hovered, change background colour to #2d422c.
+*/
+input[type="submit"]:hover {
+  background-color: #2d422c;
+}
+
+/* 
+  This is a class for styling the anchor tags in the navigation bar.
+
+  It adds a padding of 20 pixels and changes the font colour to #dad7cd.
+
+  It changes the font-size to 21 pixels. 
+
+  It uses the Georgia font family, if that doesn't work it uses the Cambria font family, if that 
+  doesn't work then it uses the Baskerville font family, if that doesn't work then it uses the 
+  Garamond font family, if that doesn't work it uses the Times New Roman font family, and finally
+  it'll use the serif font as a last resort.
+
+  This styling uppercases the text.
+
+  It adds a duration of 0.4 seconds for transitions (i.e., change of colour when hovered).
+*/
+.nav-link {
+  padding: 20px;
+
+  color: #dad7cd;
+
+  font-family: Georgia, Cambria, Baskerville, Garamond, "Times New Roman", serif;
+  font-size: 21px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  /* Length of the transition for when it's hovered */
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+/* 
+  This is a descendant selector to style all list items that are in the nav-link class elements.
+
+  It styles all the list items in the nav-link class to be inline-blocks.
+*/
+.nav-link li {
+  display: inline-block;
+}
+
+/* 
+  This is the styling for when an item in the navigation bar gets hovered and when it's being focused
+  with the tab key.
+
+  It changes the background colour of that item to #6a9969.
+*/
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #6a9969;
+}
+
+/* 
+  This is a class to style the disclaimer text informing user not to submit any personal or sensitive information.
+
+  It changes the font colour to #850000 and makes it bold.
+*/
+.disclaimer-text {
+  color: #850000;
+  font-weight: bold;
+}
+
+/* 
+  This is a class to style the "[required]" texts.
+
+  It changes the font colour to #850000.
+*/
+.required-text {
+  color: #850000;
+}
+
+/* 
+  This is an ID for styling the restaurant name (MUGHALS & CO.) in the header.
+  
+  It makes it an inline element. Adds 10 pixels of padding. Changes the font colour to #dad7cd.
+  It has a font size of 24 pixels. 
+  
+  It uses the Didot font family, if that doesn't work then it uses the Palatino font family,
+  if that doesn't work then it uses the Lucida Bright font family, and finally it'll use the 
+  serif font as a last resort.
+
+  It uppercases the text. As well as having 3 pixels of letter spacing.
+*/
+#restaurant-name {
+  display: inline;
+
+  padding: 10px;
+
+  font-family: Didot, Palatino, "Lucida Bright", serif;
+  font-size: 24px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  color: #dad7cd;
+}
+
+/* 
+  This is an ID for styling the text in the footer.
+
+  It has a font colour of #2d422c and a font size of 18 pixels.
+*/
+#footer-text {
+  color: #2d422c;
+  font-size: 18px;
+}
+
+/* 
+  This is an ID for the line (hr tag) that divides the footer from the main content.
+  It has a border with a line-width of 2 pixels, is solid, and a colour of #588157.
+
+  Its width has been set to 99% after experimenting with different values.
+*/
+#footer-hr {
+  border: 2px solid #588157;
+  width: 99%;
+}
