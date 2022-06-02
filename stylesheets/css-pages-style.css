@@ -48,6 +48,14 @@ body {
 }
 
 /* 
+  This styles the main tag to have a margin of 5% for the top-and-bottom and a margin on 10% for the left-and-right. 
+  This is to ensure that the website uses 90%-95% of the screen instead of the full 100% to provide visual relief.
+*/
+main {
+  margin: 5% 10%;
+}
+
+/* 
   This styles the header to have a background colour of #588157. As well as centering all text in the header.
 */
 header {
@@ -56,9 +64,10 @@ header {
 }
 
 /*
-  This styles the nav to have 20 pixels of padding only on the top-and-bottom.
+  This styles the nav to have 20 pixels of padding only on the top-and-bottom. It also makes it an inline-block element.
 */
 nav {
+  display: inline-block;
   padding: 20px 0px;
 }
 
@@ -70,6 +79,10 @@ nav {
 
   The heading text will use the Didot font family, then Palatino if Didot doesn't work, 
   then Lucida Bright if Palatino doesn't work, and finally serif font as a last resort.
+
+  It has an animation, called "flip-vertical", that changes the opacity and rotates the text multiple times 
+  vertically (round the x-axis) within 0.8 seconds with a 0.5 second delay.
+  Inspired from: https://alvarotrigo.com/blog/css-text-animations/
 */
 h1 {
   color: #2d422c;
@@ -83,6 +96,106 @@ h1 {
   font-size: 36px;
   font-weight: bold;
   font-family: Didot, Palatino, "Lucida Bright", serif;
+
+  opacity: 0;
+  -moz-animation: flip-vertical 0.8s ease-in-out 0.5s forwards;
+  -webkit-animation: flip-vertical 0.8s ease-in-out 0.5s forwards;
+  -o-animation: flip-vertical 0.8s ease-in-out 0.5s forwards;
+  animation: flip-vertical 0.8s ease-in-out 0.5s forwards;
+}
+
+@-o-keyframes flip-vertical {
+  from {
+    opacity: 0;
+
+    -ms-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  to {
+    opacity: 1;
+
+    -ms-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    -webkit-transform: rotateX(720deg);
+    -o-transform: rotateX(720deg);
+    transform: rotateX(720deg);
+  }
+}
+
+@-moz-keyframes flip-vertical {
+  from {
+    opacity: 0;
+
+    -ms-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  to {
+    opacity: 1;
+
+    -ms-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    -webkit-transform: rotateX(720deg);
+    -o-transform: rotateX(720deg);
+    transform: rotateX(720deg);
+  }
+}
+
+@-webkit-keyframes flip-vertical {
+  from {
+    opacity: 0;
+
+    -ms-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  to {
+    opacity: 1;
+
+    -ms-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    -webkit-transform: rotateX(720deg);
+    -o-transform: rotateX(720deg);
+    transform: rotateX(720deg);
+  }
+}
+
+/* 
+  The animation for flipping the headings vertically (around the x-axis). It starts as transparent and at 90 degrees. 
+  It ends as fully opaque and at 720 degrees around the x-axis.
+
+  Inspired from: https://alvarotrigo.com/blog/css-text-animations/
+*/
+@keyframes flip-vertical {
+  from {
+    opacity: 0;
+
+    -ms-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  to {
+    opacity: 1;
+
+    -ms-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    -webkit-transform: rotateX(720deg);
+    -o-transform: rotateX(720deg);
+    transform: rotateX(720deg);
+  }
 }
 
 /*
@@ -207,8 +320,8 @@ input[type="date"] {
   There is 12 pixels of padding top-and-bottom and 30 pixels of padding left-and-right. There is 10 pixels of margin on the top 
   and 30 pixels of margin on the bottom.
 
-  This styling makes it so that when the cursor is on the submit button, it changes to a pointer. As well as adding a duration of 
-  0.4 seconds for transitions (i.e., change of colour when hovered).
+  This styling makes it so that when the cursor is on the submit button, it changes to a pointer. As well as adding a transition for the background
+  colour, the duration of the transition is set for 0.4 seconds.
 */
 input[type="submit"] {
   background-color: #588157;
@@ -226,10 +339,11 @@ input[type="submit"] {
   margin-bottom: 30px;
 
   cursor: pointer;
-  -moz-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 /* 
@@ -253,7 +367,8 @@ input[type="submit"]:hover {
 
   This styling uppercases the text.
 
-  It adds a duration of 0.4 seconds for transitions (i.e., change of colour when hovered).
+  It adds a transition to change the background color when the element gets hovered or focused with the tab key,
+  with a transition duration of 0.4 seconds.
 */
 .nav-link {
   padding: 20px;
@@ -261,26 +376,16 @@ input[type="submit"]:hover {
   color: #dad7cd;
 
   font-family: Georgia, Cambria, Baskerville, Garamond, "Times New Roman", serif;
-  font-size: 21px;
+  font-size: 25px;
 
   text-transform: uppercase;
 
   letter-spacing: 3px;
 
-  /* Length of the transition for when it's hovered */
-  -moz-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-/* 
-  This is a descendant selector to style all list items that are in the nav-link class elements.
-
-  It styles all the list items in the nav-link class to be inline-blocks.
-*/
-.nav-link li {
-  display: inline-block;
+  -moz-transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 /* 
@@ -292,6 +397,15 @@ input[type="submit"]:hover {
 .nav-link:hover,
 .nav-link:focus {
   background-color: #6a9969;
+}
+
+/* 
+  This is a descendant selector to style all list items that are in the nav-link class elements.
+
+  It styles all the list items in the nav-link class to be inline-blocks.
+*/
+.nav-link li {
+  display: inline-block;
 }
 
 /* 
@@ -317,13 +431,16 @@ input[type="submit"]:hover {
   This is an ID for styling the restaurant name (MUGHALS & CO.) in the header.
   
   It makes it an inline element. Adds 10 pixels of padding. Changes the font colour to #dad7cd.
-  It has a font size of 24 pixels. 
+  It has a font size of 24 pixels. It is fully opaque.
   
   It uses the Didot font family, if that doesn't work then it uses the Palatino font family,
   if that doesn't work then it uses the Lucida Bright font family, and finally it'll use the 
   serif font as a last resort.
 
   It uppercases the text. As well as having 3 pixels of letter spacing.
+  
+  A value of none has been applied to the text shadow and animation property to ensure there is no text shadow & animations 
+  for this element on the all pages.
 */
 #restaurant-name {
   display: inline;
@@ -338,6 +455,14 @@ input[type="submit"]:hover {
   letter-spacing: 3px;
 
   color: #dad7cd;
+  opacity: 1;
+
+  text-shadow: none;
+
+  -o-animation: none;
+  -moz-animation: none;
+  -webkit-animation: none;
+  animation: none;
 }
 
 /* 

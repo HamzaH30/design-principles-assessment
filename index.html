@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="stylesheets/css-pages-style.css" />
 
     <style>
-      /* 
-        This styles the body to have a background image of a variety of Indian food. The background image is centered. 
+      /*
+        This styles the body to have a background image of a variety of Indian food. The background image is centered.
         The background image is set to not repeat and appear multiple times. The background's size has been set to take
-        up the entire body. 
+        up the entire body.
 
         It has a height of 100vh, 100% of the viewport's height - the full height of the screen.
         The position has been set to relative for the heading tag positioning.
@@ -41,23 +41,24 @@
       }
 
       /*
-        This styles the main tag. 
+        This styles the main tag.
 
-        It has an absolute position, has a value of 50% on the top and left properties, has -50% margin on the right, and has a value of 
-        translate(-50%, -50%) for the transform property. This helps position the green background in the center. This was referenced
-        from https://www.w3.org/Style/Examples/007/center.en.html. 
+        It has an absolute position, has a value of 50% on the top and left properties, has -50% margin on the right and auto margin on all the other sides,
+        and has a value of translate(-50%, -50%) for the transform property. This helps position the green background in the center.
+        This was referenced from https://www.w3.org/Style/Examples/007/center.en.html.
 
         It has a text colour of #dad7cd and a background colour of #588157. The text is centered.
       */
       main {
-        /* 
-          Start of referenced code to center the green background. 
-          Referenced from https://www.w3.org/Style/Examples/007/center.en.html 
+        /*
+          Start of referenced code to center the green background.
+          Referenced from https://www.w3.org/Style/Examples/007/center.en.html
         */
+
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-right: -50%;
+        margin: auto -50% auto auto;
 
         -o-transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
@@ -71,15 +72,19 @@
         text-align: center;
       }
 
-      /* 
+      /*
         This styles the h1 tag that says: "MUGHALS & CO."
 
         It uses the Georgia font family, if that doesn't work it uses the Times font family,
         if that doesn't work it uses the Times New Roman font, and finally it uses the serif font
-        as a last resort. 
+        as a last resort.
 
         It has a font size of 110 pixels. Has 30 pixels of margin. Has a font colour of #dad7cd.
-        It styles the text to be capitalized. 
+        It styles the text to be capitalized.
+
+        It has a text shadow that is blurred to make it pop out, with a light shade of black.
+
+        It is fully opaque, and has no animations to override the animations set for h1 in the external CSS. 
       */
       h1 {
         margin: 30px;
@@ -87,22 +92,35 @@
         font-family: Georgia, Times, "Times New Roman", serif;
         color: #dad7cd;
         text-transform: capitalize;
+
+        text-shadow: 5px 3px 5px #2b2b2b;
+
+        opacity: 1;
+
+        -o-animation: none;
+        -moz-animation: none;
+        -webkit-animation: none;
+        animation: none;
       }
 
-      /* 
+      /*
         This styles the h2 tag that says: "Where Kings Dine".
 
         It has 15 pixels of margin. Has a font size of 48 pixels. Has a font colour of #dad7cd.
 
         It uses the Great Wishes font family, if that doesn't work it uses the Didot font family,
-        if that doesn't work it uses the Times New Roman font, if that doesn't work it uses the 
-        Times font, and finally it will use the serif font as a last resort. 
+        if that doesn't work it uses the Times New Roman font, if that doesn't work it uses the
+        Times font, and finally it will use the serif font as a last resort.
+
+        A text shadow has been added with little blur to make it visually appealing and eye-catching, with a light shade of black.
       */
       h2 {
         margin: 15px;
         font-size: 48px;
         font-family: "Great Wishes", Didot, "Times New Roman", Times, serif;
         color: #dad7cd;
+
+        text-shadow: 5px 3px 3px #2b2b2b;
       }
     </style>
   </head>
@@ -111,7 +129,7 @@
       <!-- Restaurant name -->
       <h1 id="restaurant-name">MUGHALS & CO.</h1>
       <!-- Navigation bar -->
-      <nav style="display: inline-block">
+      <nav>
         <a href="index.html" class="nav-link"><li>Home</li></a>
         <a href="about.html" class="nav-link"><li>About</li></a>
         <a href="catering.html" class="nav-link"><li>Catering</li></a>
