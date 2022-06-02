@@ -57,9 +57,18 @@ main {
 }
 
 /* 
+  This styles the header to have a position of sticky and a value of 0 for the top. This makes it so that the header 
+  and the contents in the header (restaurant name and nav bar) remain at the top of the user's browser as they scroll
+  down the webpage. A value of 1 has been set for the z-index to make sure that the header stays on top of all other elements.
+
   This styles the header to have a background colour of #588157. As well as centering all text in the header.
 */
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
   background-color: #588157;
   text-align: center;
 }
