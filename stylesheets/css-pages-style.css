@@ -82,7 +82,7 @@ nav {
 
   It has an animation, called "flip-vertical", that changes the opacity and rotates the text multiple times 
   vertically (round the x-axis) within 0.8 seconds with a 0.5 second delay.
-  Inspired from: https://alvarotrigo.com/blog/css-text-animations/
+  Researched from: https://alvarotrigo.com/blog/css-text-animations/
 */
 h1 {
   color: #2d422c;
@@ -174,7 +174,7 @@ h1 {
   The animation for flipping the headings vertically (around the x-axis). It starts as transparent and at 90 degrees. 
   It ends as fully opaque and at 720 degrees around the x-axis.
 
-  Inspired from: https://alvarotrigo.com/blog/css-text-animations/
+  Researched from: https://alvarotrigo.com/blog/css-text-animations/
 */
 @keyframes flip-vertical {
   from {

@@ -3,7 +3,7 @@
     Course: Software Development 20S
     Teacher: Scott Hardman
     School: Pembina Trails Early College
-    Date Last Modified: June 1, 2022
+    Date Last Modified: June 2, 2022
 -->
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
         up the entire body.
 
         It has a height of 100vh, 100% of the viewport's height - the full height of the screen.
-        The position has been set to relative for the heading tag positioning.
+        The position has been set to relative for the heading tag positioning, it will be the position ancestor.
       */
       body {
         background: url("images/background-image-1.png");
@@ -41,13 +41,14 @@
       }
 
       /*
-        This styles the main tag.
+        This styles the main tag. 
 
-        It has an absolute position, has a value of 50% on the top and left properties, has -50% margin on the right and auto margin on all the other sides,
-        and has a value of translate(-50%, -50%) for the transform property. This helps position the green background in the center.
+        It is absolute positioned relative to the body. It has a top and left value of 50%, but then to center the element, it has
+        been translated -50% top and left. This helps position the green background in the center. 
         This was referenced from https://www.w3.org/Style/Examples/007/center.en.html.
 
-        It has a text colour of #dad7cd and a background colour of #588157. The text is centered.
+        It has a text colour of #dad7cd and a background colour of #588157. The text is centered. It has -50% margin on the right to 
+        ensure that the element doesn't shrink. This was just by playing around and testing to see what works.
       */
       main {
         /*
