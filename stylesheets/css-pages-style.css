@@ -33,7 +33,8 @@
 }
 
 /*
-  All elements will have a line height of 140% of their font size applied to all text.
+  All elements will have a line height of 140% of their font size applied to all text. This is to ensure
+  there is sufficient null space around the text on the webpage.
 */
 * {
   line-height: 140%;
@@ -218,13 +219,83 @@ p {
 
 /* 
   This styles all horizontal rules (hr) to have a border that has a line-width of 5 pixels. is solid, and has a colour of #588157.
-  All horizontal rules have a border-radius of 5 pixels (rounded ends). They have a width of 50%. Their margin is auto.
+  All horizontal rules have a border-radius of 5 pixels (rounded ends). Their margin is auto.
+
+  They start as transparent and no width, but then with the animation, called "grow-hr", their width increase to 50% and they become fully opaque 
+  in 1 second with a 0.5 second delay. The animation timing function is set to linear.
 */
 hr {
   border: 5px solid #588157;
   border-radius: 5px;
-  width: 50%;
   margin: auto;
+
+  opacity: 0;
+  width: 0;
+
+  -moz-animation: grow-hr 1s linear 0.5s forwards;
+  -webkit-animation: grow-hr 1s linear 0.5s forwards;
+  -o-animation: grow-hr 1s linear 0.5s forwards;
+  animation: grow-hr 1s linear 0.5s forwards;
+}
+
+/* 
+  The animation for increasing the width (size) and opacity of the hr tag under each h1 on every webpage (except for home page).
+*/
+@-o-keyframes grow-hr {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+
+  to {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+/* 
+  The animation for increasing the width (size) and opacity of the hr tag under each h1 on every webpage (except for home page).
+*/
+@-moz-keyframes grow-hr {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+
+  to {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+/* 
+  The animation for increasing the width (size) and opacity of the hr tag under each h1 on every webpage (except for home page).
+*/
+@-webkit-keyframes grow-hr {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+
+  to {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+/* 
+  The animation for increasing the width (size) and opacity of the hr tag under each h1 on every webpage (except for home page).
+*/
+@keyframes grow-hr {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+
+  to {
+    width: 50%;
+    opacity: 1;
+  }
 }
 
 /*
@@ -479,9 +550,78 @@ input[type="submit"]:hover {
   This is an ID for the line (hr tag) that divides the footer from the main content.
   It has a border with a line-width of 2 pixels, is solid, and a colour of #588157.
 
-  Its width has been set to 99% after experimenting with different values.
+  The element starts as transparent and with no width, but then with the animation, called "grow-footer-hr", 
+  the width increases to 99% (value set after experimenting) and it becomes fully opaque in 1 second with a 0.5 second delay. 
+  The animation timing function is set to linear.
 */
 #footer-hr {
   border: 2px solid #588157;
-  width: 99%;
+
+  width: 0;
+  opacity: 0;
+
+  -moz-animation: grow-footer-hr 1s linear 0.5s forwards;
+  -webkit-animation: grow-footer-hr 1s linear 0.5s forwards;
+  -o-animation: grow-footer-hr 1s linear 0.5s forwards;
+  animation: grow-footer-hr 1s linear 0.5s forwards;
+}
+
+/*
+  The animation for growing the footer hr from no width to 99% width, and from transparent to opaque.
+*/
+@-o-keyframes grow-footer-hr {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 99%;
+    opacity: 1;
+  }
+}
+
+/*
+  The animation for growing the footer hr from no width to 99% width, and from transparent to opaque.
+*/
+@-moz-keyframes grow-footer-hr {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 99%;
+    opacity: 1;
+  }
+}
+
+/*
+  The animation for growing the footer hr from no width to 99% width, and from transparent to opaque.
+*/
+@-webkit-keyframes grow-footer-hr {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 99%;
+    opacity: 1;
+  }
+}
+
+/*
+  The animation for growing the footer hr from no width to 99% width, and from transparent to opaque.
+*/
+@keyframes grow-footer-hr {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 99%;
+    opacity: 1;
+  }
 }
